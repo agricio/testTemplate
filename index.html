@@ -910,28 +910,28 @@
 
 <script>
 
-    function formatPhoneNumber(value) {
-        if (!value) return value;
+   // function formatPhoneNumber(value) {
+       // if (!value) return value;
 
         // strip characters out
-        const phoneNumber = value.replace(/[^\d]/g, '');
+       // const phoneNumber = value.replace(/[^\d]/g, '');
 
-        const phoneNumberLength = phoneNumber.length;
+      //  const phoneNumberLength = phoneNumber.length;
 
-        if (phoneNumberLength < 4) return phoneNumber;
+      //  if (phoneNumberLength < 4) return phoneNumber;
 
-        if (phoneNumberLength < 7) {
-            return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
-        }
+      //  if (phoneNumberLength < 7) {
+         //   return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+      //  }
 
-        return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 9)}`;
-    }
+       // return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 9)}`;
+   // }
 
-    const input = document.getElementById('phone');
-    input.addEventListener('keydown', function(e) {
-        const formattedInputValue = formatPhoneNumber(e.target.value);
-        e.target.value = formattedInputValue;
-    });
+   // const input = document.getElementById('phone');
+   // input.addEventListener('keydown', function(e) {
+      //  const formattedInputValue = formatPhoneNumber(e.target.value);
+       // e.target.value = formattedInputValue;
+   // });
 
 </script>
 

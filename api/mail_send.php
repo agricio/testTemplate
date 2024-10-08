@@ -61,8 +61,6 @@ try {
     $frequency = $POST['frequency'];
     $text = $_POST['message'];
 
-    $teste [] = $firstName, $lastName, $email ,$phone ,$street_Address ,$city_ ,$street_Address ,$zipCode ,$service ,$frequency, $text
-
     $search = ['{{firstName}}', '{{lastName}}', '{{email}}', '{{phone}}'];
     $replace = [$firstName, $lastName, $email, $phone];
 
@@ -89,8 +87,8 @@ try {
     $enviadoCliente = $mail->Send();
 
     //
-     echo
-        "<script>alert('Thank you'$teste' for the message. We will contact you shortly.');</script>
+     echo 
+        "<script>alert('Thank you for the message. We will contact you shortly.');</script>
         <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/'</script>";
     } catch (Exception $e) {
         echo "<script>alert('Sorry! Please try again.');</script>
