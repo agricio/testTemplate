@@ -53,9 +53,9 @@ try {
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $streetAddress = $POST['streetAddress'];
-    $city = $POST['city'];
-    $state = $POST['state'];
+    $street_Address = $POST['streetAddress'];
+    $city_ = $POST['city'];
+    $state_ = $POST['state'];
     $zipCode = $POST['zipCode'];
     $service = $POST['service'];
     $frequency = $POST['frequency'];
@@ -81,7 +81,7 @@ try {
     $mail->AddAddress("nerovigiann@hotmail.com");
 
     //Conteúdo do e-mail
-    $mail->Body = "Possivel cliente: '$firstName' '$lastName', email:'$email', telefone: '$phone'. Endereço: $streetAddress, $city, $state, $zipCode. O serviço vai ser: $service, com frequencia de: $frequency. com essa descrição: '$text'";
+    $mail->Body = "Possivel cliente: '$firstName' '$lastName', email:'$email', telefone: '$phone'. Endereço: $street_Address, $city, $state_, $zipCode. O serviço vai ser: $service, com frequencia de: $frequency. com essa descrição: '$text'";
     $mail->AltBody = $mail->Body;
 
     $enviadoCliente = $mail->Send();
