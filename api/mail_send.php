@@ -53,12 +53,14 @@ try {
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $street_Address = $POST['street'];
-    $city = $POST['city'];
-    $state = $POST['state'];
-    $zipCode = $POST['zipCode'];
-    $service = $POST['service'];
-    $frequency = $POST['frequency'];
+
+    $street_Address = $_POST['street'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $zipCode = $_POST['zipCode'];
+    $service = $_POST['service'];
+    $frequency = $_POST['frequency'];
+
     $text = $_POST['message'];
 
     $search = ['{{firstName}}', '{{lastName}}', '{{email}}', '{{phone}}'];
