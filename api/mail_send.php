@@ -63,6 +63,7 @@ try {
 
     $text = $_POST['message'];
 
+    
     $search = ['{{firstName}}', '{{lastName}}', '{{email}}', '{{phone}}'];
     $replace = [$firstName, $lastName, $email, $phone];
 
