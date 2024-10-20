@@ -86,28 +86,22 @@ try {
     //Conteúdo do e-mail
     $mail->Body = "<h2>Possivel cliente:</h2>
     <br/>
-    <p>'nome: $firstName' '$lastName'</p>
-    <br/>
-    <p>email:'$email'</P>
-    <br/> 
-    <p>telefone: '$phone'</p>
-    <br/>
-    <p>Endereço:  rua: '$street', Cidade: '$city', Estado: '$state', Zipcode: '$zipCode'</p>
-    <br/>
-    <p>O serviço vai ser: '$service', com frequencia de: '$frequency'.</p>
-    <br/>
-    <p>com essa descrição: '$text'</p>";
+    <p>'nome: $firstName $lastName</p>
+    <p>email:$email</P>
+    <p>telefone:$phone</p>
+    <p>Endereço:  rua: $street, Cidade: $city, Estado: $state, Zipcode: $zipCode.</p>
+    <p>O serviço vai ser: $service</P>
+    <p>com frequencia de: $frequency.</p>
+    <p>com essa descricao: $text</p>";
+    
     $mail->AltBody = $mail->Body;
 
     $enviadoCliente = $mail->Send();
 
     //
      echo 
-        "<script>alert('Thank you for the message. We will contact you shortly.');</script>
-        <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/'</script>";
+        "<script>alert('Thank you for the message. We will contact you shortly.');</script>";
     } catch (Exception $e) {
-        echo "<script>alert('Sorry! Please try again.');</script>
-              <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/#contact'</script>
-        "; 
+        echo "<script>alert('Sorry! Please try again.');</script>"; 
     }
 
