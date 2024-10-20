@@ -84,7 +84,19 @@ try {
     $mail->AddAddress("nerovigiann@hotmail.com");
 
     //Conteúdo do e-mail
-    $mail->Body = "Possivel cliente: '$firstName' '$lastName', email:'$email', telefone: '$phone'. Endereço: $street, $city, $state, $zipCode. O serviço vai ser: $service, com frequencia de: $frequency. com essa descrição: '$text'";
+    $mail->Body = "<h2>Possivel cliente:</h2>
+    <br/>
+    <p>'nome: $firstName' '$lastName'</p>
+    <br/>
+    <p>email:'$email'</P>
+    <br/> 
+    <p>telefone: '$phone'</p>
+    <br/>
+    <p>Endereço:  rua: '$street', Cidade: '$city', Estado: '$state', Zipcode: '$zipCode'</p>
+    <br/>
+    <p>O serviço vai ser: '$service', com frequencia de: '$frequency'.</p>
+    <br/>
+    <p>com essa descrição: '$text'</p>";
     $mail->AltBody = $mail->Body;
 
     $enviadoCliente = $mail->Send();
