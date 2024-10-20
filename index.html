@@ -799,18 +799,19 @@
                             <input 
                                 type="text"
                                 class="contact__input" 
-                                name="zipCode"  
+                                name="zipCode"
+                                placeholder="the five zip code Numbers"  
                                 title="Please enter a Zip Code" 
-                                pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$">
+                                pattern="[0-9]{5}">
                         </div>
                     </div>
-                    
+
                     <p class="about__description">Service</p>
 
                     <div class="contact__inputs grid">
 
                         <div class="contact__content">
-                            <label for="" class="contact__label">Servie*</label>
+                            <label for="" class="contact__label">Service*</label>
                             <select class="contact__input" name="service" size="1" required>
                                 <option value=""></option>
                                 <option value="House Cleaning">House Cleaning</option>
@@ -829,7 +830,6 @@
                                 <option value="Weekly">Weekly</option> 
                                 <option value="Biweekly">Biweekly</option>
                                 <option value="Monthly">Monthly</option>
-                                <option value="Condos Clean">Condos Clean</option>
                             </select>
                         </div>
                     
