@@ -21,6 +21,18 @@ require 'vendor/autoload.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$street_Address = $_POST['street'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$zipCode = $_POST['zipCode'];
+$service = $_POST['service'];
+$frequency = $_POST['frequency'];
+$text = $_POST['message'];
+
 try {
     //Server settings
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -35,7 +47,7 @@ try {
     //Recipients
     $mail->client_email = $_ENV['SERVER'];
     $mail->setFrom($_ENV['EMAIL'], ('Lumar Cleaning Solutions'));
-    $mail->addAddress($_ENV['EMAIL'], 'Lumar Cleaning Solutions');     //Add a recipient
+    $mail->addAddress($email, 'Lumar Cleaning Solutions');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     $mail->addReplyTo($_ENV['EMAIL'], 'Information');
    // $mail->addCC('cc@example.com');
@@ -47,23 +59,8 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = ($_POST['project']);
+    $mail->Subject = ($_POST['service']);
 
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-
-    $street_Address = $_POST['street'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $zipCode = $_POST['zipCode'];
-    $service = $_POST['service'];
-    $frequency = $_POST['frequency'];
-
-    $text = $_POST['message'];
-
-    
     $search = ['{{firstName}}', '{{lastName}}', '{{email}}', '{{phone}}'];
     $replace = [$firstName, $lastName, $email, $phone];
 
@@ -81,7 +78,7 @@ try {
     $mail->Subject = "Possivel cliente";
 
     //E-mail para a qual o e-mail será enviado
-    $mail->AddAddress("nerovigiann@hotmail.com");
+    $mail->AddAddress($_ENV['EMAIL']);
 
     //Conteúdo do e-mail
     $mail->Body = "<h2>Possivel cliente:</h2>
