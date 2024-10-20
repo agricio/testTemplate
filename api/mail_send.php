@@ -86,13 +86,16 @@ try {
     //Conteúdo do e-mail
     $mail->Body = "<h2>Possivel cliente:</h2>
     <br/>
-    <p>'nome: $firstName $lastName</p>
+    <p>nome: $firstName $lastName</p>
     <p>email:$email</P>
     <p>telefone:$phone</p>
-    <p>Endereço:  rua: $street, Cidade: $city, Estado: $state, Zipcode: $zipCode.</p>
-    <p>O serviço vai ser: $service</P>
+    <p>Endereco: rua: $street_Address</p>
+    <p>Cidade: $city</p> 
+    <p>Estado: $state</p>
+    <p>Zipcode: $zipCode.</p>
+    <p>O servico vai ser: $service</P>
     <p>com frequencia de: $frequency.</p>
-    <p>com essa descricao: $text</p>";
+    <p>Descircao do servico: $text</p>";
     
     $mail->AltBody = $mail->Body;
 
@@ -100,8 +103,10 @@ try {
 
     //
      echo 
-        "<script>alert('Thank you for the message. We will contact you shortly.');</script>";
+        "<script>alert('Thank you for the message. We will contact you shortly.');</script>
+        <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/'</script>";
     } catch (Exception $e) {
-        echo "<script>alert('Sorry! Please try again.');</script>"; 
+        echo "<script>alert('Sorry! Please try again.');</script>
+        <script type='text/javascript'>window.location.href='https://porfolio-khaki.vercel.app/'</script>"; 
     }
 
