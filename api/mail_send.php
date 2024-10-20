@@ -34,8 +34,8 @@ try {
 
     //Recipients
     $mail->client_email = $_ENV['SERVER'];
-    $mail->setFrom($_ENV['EMAIL'], ($_POST['firstName']));
-    $mail->addAddress($_ENV['EMAIL'], 'Agricio');     //Add a recipient
+    $mail->setFrom($_ENV['EMAIL'], ('Lumar Cleaning Solutions'));
+    $mail->addAddress($_ENV['EMAIL'], 'Lumar Cleaning Solutions');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     $mail->addReplyTo($_ENV['EMAIL'], 'Information');
    // $mail->addCC('cc@example.com');
